@@ -17,6 +17,8 @@
 		84013E0D2C8748A8008A2A35 /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E0C2C8748A8008A2A35 /* VideoDetailView.swift */; };
 		84013E0F2C8748C9008A2A35 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E0E2C8748C9008A2A35 /* Video.swift */; };
 		84013E112C8748D8008A2A35 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E102C8748D8008A2A35 /* Playlist.swift */; };
+		849775C82C87AFC800B46266 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 849775C72C87AFC800B46266 /* CachedAsyncImage */; };
+		849775CB2C87B05700B46266 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = 849775CA2C87B05700B46266 /* YouTubePlayerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849775CB2C87B05700B46266 /* YouTubePlayerKit in Frameworks */,
+				849775C82C87AFC800B46266 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +143,10 @@
 			dependencies = (
 			);
 			name = MyYoutubeApp;
+			packageProductDependencies = (
+				849775C72C87AFC800B46266 /* CachedAsyncImage */,
+				849775CA2C87B05700B46266 /* YouTubePlayerKit */,
+			);
 			productName = MyYoutubeApp;
 			productReference = 84013DF02C87477D008A2A35 /* MyYoutubeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +175,10 @@
 				Base,
 			);
 			mainGroup = 84013DE72C87477D008A2A35;
+			packageReferences = (
+				849775C62C87AFC800B46266 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				849775C92C87B05700B46266 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+			);
 			productRefGroup = 84013DF12C87477D008A2A35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -423,6 +435,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		849775C62C87AFC800B46266 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+		849775C92C87B05700B46266 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		849775C72C87AFC800B46266 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849775C62C87AFC800B46266 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+		849775CA2C87B05700B46266 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849775C92C87B05700B46266 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84013DE82C87477D008A2A35 /* Project object */;
 }

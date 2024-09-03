@@ -6,13 +6,49 @@
 //
 
 import SwiftUI
+import YouTubePlayerKit
 
 struct VideoDetailView: View {
+    
+    var video: Video
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        GeometryReader { proxy in
+            VStack(alignment: .leading) {
+                
+                //Configure video player
+                let youTubePlayer = YouTubePlayer(
+                    source: .video(id: video.snippet?.resourceId?.videoId ?? ""),
+                    configuration: .init(
+                        autoPlay: false
+                    )
+                )
+                
+                //Video Player
+                YouTubePlayerView(youTubePlayer)
+                    .frame(width: proxy.size.width, height: proxy.size.width/1.77778)
+                
+                //Title and Desc
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 20) {
+                        Text(video.snippet?.title ?? "There's no title")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                        
+                        Text(video.snippet?.description ?? "There's no description")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                    }
+                }
+                .padding()
+                .scrollIndicators(.hidden)
+            }
+        }
+        
     }
 }
 
 #Preview {
-    VideoDetailView()
+    VideoDetailView(video: Video(id: "hello"))
 }
