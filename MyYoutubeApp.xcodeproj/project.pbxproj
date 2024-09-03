@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84013DF42C87477D008A2A35 /* MyYoutubeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013DF32C87477D008A2A35 /* MyYoutubeAppApp.swift */; };
-		84013DF62C87477D008A2A35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013DF52C87477D008A2A35 /* ContentView.swift */; };
+		84013DF42C87477D008A2A35 /* MyYoutubeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013DF32C87477D008A2A35 /* MyYoutubeApp.swift */; };
+		84013DF62C87477D008A2A35 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013DF52C87477D008A2A35 /* HomeView.swift */; };
 		84013DF82C87477E008A2A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84013DF72C87477E008A2A35 /* Assets.xcassets */; };
 		84013DFC2C87477E008A2A35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84013DFB2C87477E008A2A35 /* Preview Assets.xcassets */; };
+		84013E072C87485F008A2A35 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E062C87485F008A2A35 /* DataService.swift */; };
+		84013E092C874898008A2A35 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E082C874898008A2A35 /* FeedView.swift */; };
+		84013E0B2C8748A0008A2A35 /* VideoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E0A2C8748A0008A2A35 /* VideoRowView.swift */; };
+		84013E0D2C8748A8008A2A35 /* VideoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E0C2C8748A8008A2A35 /* VideoDetailView.swift */; };
+		84013E0F2C8748C9008A2A35 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E0E2C8748C9008A2A35 /* Video.swift */; };
+		84013E112C8748D8008A2A35 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84013E102C8748D8008A2A35 /* Playlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84013DF02C87477D008A2A35 /* MyYoutubeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyYoutubeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		84013DF32C87477D008A2A35 /* MyYoutubeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyYoutubeAppApp.swift; sourceTree = "<group>"; };
-		84013DF52C87477D008A2A35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84013DF32C87477D008A2A35 /* MyYoutubeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyYoutubeApp.swift; sourceTree = "<group>"; };
+		84013DF52C87477D008A2A35 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		84013DF72C87477E008A2A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84013DF92C87477E008A2A35 /* MyYoutubeApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyYoutubeApp.entitlements; sourceTree = "<group>"; };
 		84013DFB2C87477E008A2A35 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84013E062C87485F008A2A35 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		84013E082C874898008A2A35 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		84013E0A2C8748A0008A2A35 /* VideoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRowView.swift; sourceTree = "<group>"; };
+		84013E0C2C8748A8008A2A35 /* VideoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailView.swift; sourceTree = "<group>"; };
+		84013E0E2C8748C9008A2A35 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		84013E102C8748D8008A2A35 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		84013E122C874C98008A2A35 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		84013E132C874D25008A2A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +66,15 @@
 		84013DF22C87477D008A2A35 /* MyYoutubeApp */ = {
 			isa = PBXGroup;
 			children = (
-				84013DF32C87477D008A2A35 /* MyYoutubeAppApp.swift */,
-				84013DF52C87477D008A2A35 /* ContentView.swift */,
+				84013E132C874D25008A2A35 /* Info.plist */,
+				84013E022C8747E4008A2A35 /* App */,
+				84013E042C874834008A2A35 /* Services */,
+				84013E032C874810008A2A35 /* Views */,
+				84013E052C874840008A2A35 /* Models */,
 				84013DF72C87477E008A2A35 /* Assets.xcassets */,
 				84013DF92C87477E008A2A35 /* MyYoutubeApp.entitlements */,
 				84013DFA2C87477E008A2A35 /* Preview Content */,
+				84013E122C874C98008A2A35 /* Config.xcconfig */,
 			);
 			path = MyYoutubeApp;
 			sourceTree = "<group>";
@@ -67,6 +85,42 @@
 				84013DFB2C87477E008A2A35 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84013E022C8747E4008A2A35 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				84013DF32C87477D008A2A35 /* MyYoutubeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		84013E032C874810008A2A35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84013DF52C87477D008A2A35 /* HomeView.swift */,
+				84013E082C874898008A2A35 /* FeedView.swift */,
+				84013E0A2C8748A0008A2A35 /* VideoRowView.swift */,
+				84013E0C2C8748A8008A2A35 /* VideoDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84013E042C874834008A2A35 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84013E062C87485F008A2A35 /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84013E052C874840008A2A35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84013E0E2C8748C9008A2A35 /* Video.swift */,
+				84013E102C8748D8008A2A35 /* Playlist.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84013DF62C87477D008A2A35 /* ContentView.swift in Sources */,
-				84013DF42C87477D008A2A35 /* MyYoutubeAppApp.swift in Sources */,
+				84013E092C874898008A2A35 /* FeedView.swift in Sources */,
+				84013E0D2C8748A8008A2A35 /* VideoDetailView.swift in Sources */,
+				84013E0B2C8748A0008A2A35 /* VideoRowView.swift in Sources */,
+				84013E112C8748D8008A2A35 /* Playlist.swift in Sources */,
+				84013E072C87485F008A2A35 /* DataService.swift in Sources */,
+				84013DF62C87477D008A2A35 /* HomeView.swift in Sources */,
+				84013E0F2C8748C9008A2A35 /* Video.swift in Sources */,
+				84013DF42C87477D008A2A35 /* MyYoutubeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +209,7 @@
 /* Begin XCBuildConfiguration section */
 		84013DFD2C87477E008A2A35 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84013E122C874C98008A2A35 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -210,6 +271,7 @@
 		};
 		84013DFE2C87477E008A2A35 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84013E122C874C98008A2A35 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -274,6 +336,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyYoutubeApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +375,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyYoutubeApp/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

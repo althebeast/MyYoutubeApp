@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct MyYoutubeAppApp: App {
+struct MyYoutubeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }
