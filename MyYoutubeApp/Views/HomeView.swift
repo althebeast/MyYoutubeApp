@@ -9,16 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var videos = [Video]()
-    
     var body: some View {
         TabView {
             FeedView()
         }
         .padding()
-        .task {
-            self.videos = await DataService().getVideos()
-        }
     }
 }
 

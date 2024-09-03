@@ -10,6 +10,10 @@ import Foundation
 struct DataService {
     
     private let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
+    private let endPoint = "https://www.googleapis.com/youtube/v3/playlistItems?"
+    private let part = "part=snippet"
+    private let playlistId = "playlistId=PLivoFK0yDsLdbABNkr-WUQl6LoamkVxIB"
+    private let maxResults = "maxResults=10"
     
     func getVideos() async -> [Video] {
         
@@ -19,7 +23,7 @@ struct DataService {
         }
         
         //Create the URL
-        let urlString = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLivoFK0yDsLdbABNkr-WUQl6LoamkVxIB&key=\(apiKey!)"
+        let urlString = "\(endPoint)\(part)&\(playlistId)&\(maxResults)&key=\(apiKey!)"
         let url = URL(string: urlString)
         
         if let url {
@@ -32,6 +36,11 @@ struct DataService {
                 let (data, response) = try await session.data(for: request)
                 
                 //Parse the returned data
+                let decoder = JSONDecoder()
+                let playlist = try decoder.decode(Playlist.self, from: data)
+                
+                print(response)
+                return playlist.items
                 
                 
             } catch {
