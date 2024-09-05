@@ -28,6 +28,8 @@ struct VideoRowView: View {
                         ProgressView()
                         Spacer()
                     }
+                    .frame(width: 320, height: 180)
+                    .background(Color(.gray))
                 }
             }
             
